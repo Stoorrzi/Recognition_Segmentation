@@ -1,0 +1,11 @@
+weights/
+IMG_1.jpg
+IMG_2.jpg
+LinearRegression.py
+res.jpg
+results.jpg
+test.txt
+test2.txt
+test3.txt
+yolov8m-seg.pt
+.DS_Store
