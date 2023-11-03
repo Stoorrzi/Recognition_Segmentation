@@ -10,7 +10,7 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1000000)
 server_ip = "192.168.178.142"
 server_port = 6666
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
 
