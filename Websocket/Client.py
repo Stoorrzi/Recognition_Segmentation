@@ -7,7 +7,7 @@ import numpy as np
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1000000)
 
-server_ip = "192.168.2.163"
+server_ip = "192.168.178.142"
 server_port = 6666
 
 cap = cv2.VideoCapture(1)
