@@ -1,7 +1,6 @@
 import ultralytics
 from ultralytics import YOLO
-from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
-from IPython.display import display, Image
+from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictorpip 
 from PIL import Image as img
 import cv2
 import numpy as np
