@@ -3,6 +3,13 @@ import socket
 import pickle
 import os
 import numpy as np
+from picamera2 import Picamera2
+picam2 = Picamera2()
+picam2.preview_configuration.main.size = (1280,720)
+picam2.preview_configuration.main.format = "RGB888"
+picam2.preview_configuration.align()
+picam2.configure("preview")
+picam2.start()
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1000000)
@@ -10,11 +17,10 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1000000)
 server_ip = "192.168.178.142"
 server_port = 6666
 
-cap = cv2.VideoCapture(0)
+img= picam2.capture_array()
 
-
-while cap.isOpened():
-    ret, img = cap.read()
+while True:
+    img= picam2.capture_array()
 
     cv2.imshow("Img Client", img)
 
@@ -28,4 +34,3 @@ while cap.isOpened():
         break
 
 cv2.destroyAllWindows()
-cap.release()
