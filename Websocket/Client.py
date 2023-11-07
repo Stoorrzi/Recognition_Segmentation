@@ -22,8 +22,6 @@ img= picam2.capture_array()
 while True:
     img= picam2.capture_array()
 
-    cv2.imshow("Img Client", img)
-
     ret, buffer = cv2.imencode(".jpg", img, [int(cv2.IMWRITE_JPEG_QUALITY), 30])
 
     x_as_byte = pickle.dumps(buffer)
