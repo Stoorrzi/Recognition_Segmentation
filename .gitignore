@@ -10,3 +10,9 @@ test3.txt
 yolov8m-seg.pt
 .DS_Store
 Websocket/yolov8n.pt
+Vid.MOV
+Vid_2.MOV
+Vid_3.MOV
+yolov8l-seg.pt
+yolov8n-seg.pt
+yolov8s-seg.pt
