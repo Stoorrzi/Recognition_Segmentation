@@ -1,7 +1,5 @@
 import cv2
 from ultralytics import YOLO
-from ultralytics import FastSAM
-from ultralytics.models.fastsam import FastSAMPrompt
 import numpy as np
 import time
 
@@ -86,7 +84,7 @@ while cap.isOpened():
                     # check object target with all detected objects to get output index
                     for x in range(len(results[0].boxes.xyxy)):
                         if results[0].boxes.xyxy.tolist()[x] == object_target:
-                            
+
                             # caculate center of the object
                             center_Mask = getPointMask(x)
                             center_Bbox = getPointBbox(x)
