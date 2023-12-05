@@ -6,6 +6,6 @@ motor = Motor(17, 18)
 
 while True:
     motor.forward()
-    sleep(1000)
+    sleep(3)
     motor.backward()
-    sleep(1000)
+    sleep(3)
