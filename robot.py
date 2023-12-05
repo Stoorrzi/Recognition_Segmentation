@@ -1,4 +1,5 @@
 from gpiozero import Motor
+from time import sleep
 
 motor = Motor(17, 18)
 
