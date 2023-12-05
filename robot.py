@@ -6,6 +6,8 @@ motor = Motor(17, 18)
 
 while True:
     motor.forward()
+    print('forward')
     sleep(3)
     motor.backward()
+    print('forward')
     sleep(3)
