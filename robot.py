@@ -1,13 +1,10 @@
-from gpiozero import LED
-from time import sleep
+from gpiozero import Motor
 
-forward = LED(17)
-backward = LED(18)
+motor = Motor(17, 18)
+
 
 while True:
-    forward.on()
-    backward.off()
+    motor.forward()
     sleep(1000)
-    forward.off()
-    backward.on()
+    motor.backward()
     sleep(1000)
