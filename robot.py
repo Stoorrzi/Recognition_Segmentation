@@ -6,6 +6,7 @@ motor = Motor(17, 18)
 
 while True:
     motor.forward(1)
+    print(motor.is_active)
     # print('forward')
     # sleep(3)
     # motor.backward()
